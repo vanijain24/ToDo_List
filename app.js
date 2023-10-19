@@ -1,4 +1,4 @@
-//jshint esversion:6
+
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -12,10 +12,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb://127.0.0.1:27017/todolistDB', {
+
+
+mongoose.connect('mongodb+srv://insider4007:21iLxdnDxLTcuxc7@cluster1.ocal4p7.mongodb.net/todolistDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
 
 const itemsSchema = {
   name: String
